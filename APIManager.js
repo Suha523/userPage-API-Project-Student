@@ -3,7 +3,7 @@ class APIManager {
     this.userData = {};
   }
 
-  manageUsers() {
+  storeUsers() {
     let friends = [];
     let friend = "";
     let mainUser = "";
@@ -36,7 +36,7 @@ class APIManager {
     }
   }
 
-  manageQuotes() {
+  storeQuotes() {
     $.ajax({
       method: "get",
       url: "https://api.kanye.rest/",
@@ -50,7 +50,7 @@ class APIManager {
     });
   }
 
-  managePokemons(id) {
+  storePokemons(id) {
     $.ajax({
       method: "get",
       url: `https://pokeapi.co/api/v2/pokemon/${id}`,
@@ -67,7 +67,7 @@ class APIManager {
     });
   }
 
-  manageMeatText() {
+  storeMeatText() {
     $.ajax({
       method: "get",
       url: "https://baconipsum.com/api/?type=meat-and-filler",
@@ -76,7 +76,7 @@ class APIManager {
         this.userData["meatText"] = meatText;
       },
       error: function (xhr, text, error) {
-        alertg(error);
+        alert(error);
       },
     });
   }

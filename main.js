@@ -12,10 +12,10 @@ let renderer = new Renderer();
 
 LOAD_BTN.on("click", function () {
   let pokemonId = Math.floor(Math.random() * NUM_OF_POKEMONS);
-  apiManager.manageUsers();
-  apiManager.manageQuotes();
-  apiManager.managePokemons(pokemonId);
-  apiManager.manageMeatText();
+  apiManager.storeUsers();
+  apiManager.storeQuotes();
+  apiManager.storePokemons(pokemonId);
+  apiManager.storeMeatText();
 });
 
 DISPLAY_BTN.on("click", function () {
