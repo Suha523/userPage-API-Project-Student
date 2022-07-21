@@ -28,9 +28,14 @@
         <h4>Friends</h4>
         <div class="friends-container"></div>
       </div>
+      <div class="users-list-container">
+        <select class="select"></select>
+      </div>
       <div class="buttons">
         <button id="load">Load User Data</button>
         <button id="display">Display User</button>
+        <button id="save-user-page">Save User Page</button>
+        <button id="load-user-pages">Load User Page</button>
       </div>
     </div>
   </body>
@@ -60,7 +65,7 @@
       <img src="{{picture}}" />
     </div>
     <div id="pokemon-text">
-      <p>Favorite Pokemon: {{name}}</p>
+      <p class="pokemon-name">Favorite Pokemon: {{name}}</p>
     </div>
   </script>
 
@@ -76,6 +81,12 @@
       Favorite Quote:
       <h3>"{{quote}}"</h3>
     </div>
+  </script>
+
+  <script id="users-list-template" type="text/x-handlebars-template">
+    {{#each userPages}}
+      <option value="{{mainUser.name}}">{{mainUser.name}}</option>
+    {{/each}}
   </script>
 
   <script src="jquery-3.6.0.js"></script>

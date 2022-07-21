@@ -43,4 +43,13 @@ class Renderer {
     let meatText = template({ meat });
     meatContainer.append(meatText);
   }
+
+  renderUsersList(userPages){
+    let userSelection = $(".select");
+    userSelection.html("");
+    let source = $("#users-list-template").html();
+    let template = Handlebars.compile(source);
+    let userList = template({ userPages });
+    userSelection.append(userList);
+  }
 }
